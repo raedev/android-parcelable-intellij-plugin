@@ -15,43 +15,31 @@
 ** limitations under the License.
 */
 -->
-<idea-plugin version="8">
+<idea-plugin>
     <id>pl.charmas.parcelablegenerator</id>
-    <name>Android Parcelable code generator</name>
-    <version>0.7.0</version>
-    <vendor email="michal@charmas.pl" url="http://blog.charmas.pl">Michal Charmas</vendor>
+    <name>Android Parcelable Code Generator 4.1</name>
+    <version>0.8.0</version>
+    <vendor email="raedev@qq.com" url="https://github.com/raedev/android-parcelable-intellij-plugin/">RAE</vendor>
 
     <description><![CDATA[
-            Plugin which generates Android Parcelable boilerplate code for you.
+            Plugin which generates Android Parcelable boilerplate code for you. Now, Support for android studio 4.1.
       ]]></description>
 
-    <change-notes><![CDATA[
-            ]]>
-    </change-notes>
+    <change-notes><![CDATA[ support for android studio 4.1 ]]></change-notes>
 
     <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
-    <idea-version since-build="123.72"/>
+    <idea-version since-build="173"/>
 
-    <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
-         on how to target different products -->
-    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.lang</depends>
-    -->
-
-    <application-components>
-        <!-- Add your application components here -->
-    </application-components>
-
-    <project-components>
-        <!-- Add your project components here -->
-    </project-components>
+    <depends>com.intellij.modules.java</depends>
 
     <actions>
         <!-- Add your actions here -->
-        <action id="generateParcelableNew" class="pl.charmas.parcelablegenerator.ParcelableAction"
+        <action id="CreateGenerateParcelable" class="pl.charmas.parcelablegenerator.ParcelableAction"
                 text="Parcelable"
                 description="Generates Android Parcelable based on class fields">
-            <add-to-group group-id="GenerateGroup" anchor="last"/>
+            <add-to-group group-id="GenerateGroup" anchor="first"/>
         </action>
     </actions>
 

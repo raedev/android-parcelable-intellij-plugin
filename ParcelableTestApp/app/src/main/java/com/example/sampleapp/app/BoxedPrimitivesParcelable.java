@@ -4,6 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class BoxedPrimitivesParcelable implements Parcelable {
+    
     private final Integer a;
     private final Double b;
     private final String c;
